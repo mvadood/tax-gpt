@@ -1,4 +1,4 @@
-This is the code for this [YouTube](https://studio.youtube.com/video/CsO6iUKHKwU) Tutorial.
+This is the code for this [YouTube](https://youtu.be/CsO6iUKHKwU) Tutorial.
 
 
 The code contains a simple GPT wrapper that is contextualised using data scraped from the [ATO website](https://www.ato.gov.au).
