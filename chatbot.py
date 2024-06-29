@@ -1,12 +1,11 @@
-import streamlit as st
 import openai
+import streamlit as st
 
 import secret
 
 openai.api_key = secret.open_ai_api_key
 
-from llama_index.core import SimpleDirectoryReader, ServiceContext, VectorStoreIndex, StorageContext, \
-    load_index_from_storage
+from llama_index.core import StorageContext, load_index_from_storage
 
 st.set_page_config(page_title="Ask your Tax Questions", page_icon="💰", layout="centered", initial_sidebar_state="auto",
                    menu_items=None)

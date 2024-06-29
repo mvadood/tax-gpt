@@ -1,3 +1,8 @@
 streamlit
 openai
 llama-index
+llama-index-llms-ollama
+llama-index-embeddings-huggingface
+llama-index-vector-stores-pinecone
+llama-index-llms-groq
+scrapy

@@ -7,7 +7,7 @@ import secret
 openai.api_key = secret.open_ai_api_key
 
 def create_and_store_index():
-    reader = SimpleDirectoryReader(input_dir="./taxScrapy/output_files", recursive=True)
+    reader = SimpleDirectoryReader(input_dir="taxScrapy/output_files", recursive=True)
     docs = reader.load_data()
 
     service_context = ServiceContext.from_defaults(llm=OpenAI(model="gpt-4", temperature=0.5, system_prompt=
