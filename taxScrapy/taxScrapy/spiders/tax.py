@@ -15,9 +15,15 @@ class TaxSpider(scrapy.Spider):
     def parse(self, response):
         current_depth = response.meta.get('depth', 0)
 
-        page_text = response.xpath("//body//text()").getall()
-        page_text = ' '.join(page_text).strip()
+        page_text = response.xpath(
+            "//p[not(ancestor::header) and not(ancestor::*[contains(@id, 'nav')])]//text()").getall()
+
+        page_text = [text.strip() for text in page_text if
+                     not ("Traditional Owners and Custodians" in text or "RSS news feeds" in text)]
+
+        page_text = '\n'.join(page_text).strip()
         page_text = remove_tags(page_text)
+
         yield {
             'url': response.url,
             'text': page_text,
